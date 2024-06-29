@@ -18,8 +18,19 @@ class EventSeeder extends Seeder
             'name' => 'A Ring Új Királyai: Tyson vs Paul - A Várva Várt Összecsapás',
             'type' => 'in_door',
             'desc' => $description,
+            'main_photo' => 'images/boxing_match_announcement.png',
             'event_start_at' => '2024-07-20 18:00:00',
             'published_at' => '2024-03-13 10:00:00',
+        ]);
+
+        $description = 'Holnap kerül sor az Anglia-Szlovákia nyolcaddöntőre a 2024-es labdarúgó-Európa-bajnokságon. A mérkőzést 18:00-kor kezdik a gelsenkircheni Veltins Arénában. Az angol csapat eddig meggyőző teljesítményt nyújtott, de a szlovákok is kemény ellenfélnek bizonyulhatnak.';
+        Event::create([
+            'name' => 'Anglia-Szlovákia',
+            'type' => 'out_door',
+            'desc' => $description,
+            'main_photo' => 'images/England_vs_Slovakia_Euro2024_Round_of_16.png',
+            'event_start_at' => '2024-06-30 18:00:00',
+            'published_at' => '2024-06-29 22:51:00',
         ]);
 
     }

@@ -19,7 +19,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = Event::orderBy('published_at')->get();
+        $events = Event::orderBy('published_at', 'desc')->get();
 
         return view('public.admin.event.list', [
             'events' => $events,
@@ -63,7 +63,8 @@ class EventController extends Controller
 
         if ($request->hasFile('main_photo')) {
             $filename = $request->file('main_photo')->getClientOriginalName();
-            $imagePath = $request->file('main_photo')->storeAs('main_photos', $filename, 'public');
+            $imagePath = $request->file('main_photo')->storeAs('images', $filename, 'public');
+            $request->main_photo->move(public_path('images'), $filename);
 
             // Itt mentheted a kép útvonalát az adatbázisba, például a felhasználó profiljához.
         }

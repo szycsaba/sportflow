@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class PostController extends Controller
@@ -16,7 +15,7 @@ class PostController extends Controller
         $events = $events->map(function ($event) {
             $imageUrl = $event->main_photo;
             $event->desc = Str::limit($event->desc, 200, '...');
-            $event->main_photo = Storage::url($imageUrl);
+            $event->main_photo = $imageUrl;
 
             return $event;
         });
