@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('sf_favicon_32.png') }}">
+        <link rel="icon" type="image/png" sizes="256x256" href="{{ asset('sf_favicon_256.png') }}"> 
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
