@@ -10,7 +10,7 @@ class PostController extends Controller
     public function list()
     {
         $events = Event::where('published_at', '<', now())
-            ->orderBy('event_start_at', 'desc')
+            ->orderBy('published_at', 'desc')
             ->get();
         $events = $events->map(function ($event) {
             $imageUrl = $event->main_photo;
