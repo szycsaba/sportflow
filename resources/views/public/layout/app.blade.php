@@ -13,7 +13,7 @@
 <body class="flex flex-col flex-1">
     <x-topmenu />
     <main class="flex-1 bg-slate-50">
-        <section class="event max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <section class="event max-w-7xl mx-auto sm:px-6 lg:px-8 px-6">
             @yield('content')
         </section>
     </main>
