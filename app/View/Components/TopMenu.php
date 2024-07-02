@@ -21,6 +21,6 @@ class TopMenu extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.top-menu');
+        return view('components.topmenu');
     }
 }
