@@ -21,6 +21,9 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/', [PostController::class, 'list'])->name('posts.list');
+Route::get('/tictactoe', function () {
+    return view('tictactoe');
+});
 Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
 
 Route::get('/dashboard', function () {

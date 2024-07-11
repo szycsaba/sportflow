@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+
+body {
+    background-image: linear-gradient(black, rgb(54, 3, 54));
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    margin: 0;
+}
+
+.main {
+    height: 95vh;
+}
+
+#container {
+    padding-top: 2rem;
+    margin: auto;
+    display: block;
+    position: relative;
+    padding: 1.3rem;
+    width: 70%;
+    height: 95vh;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-image: linear-gradient(45deg, yellow, green, blue) 1;
+}
+
+#container::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 15px;
+    border: 5px solid transparent;
+    background: linear-gradient(140deg, rgb(234, 234, 141), rgb(119, 83, 11));
+    background-clip: border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.button-container {
+    width: 70%;
+    height: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding: 0.7rem;
+    position: relative;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.button-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+    border: 5px solid transparent;
+    background: linear-gradient(140deg, rgb(180, 140, 233), #330e99, #572fdc, rgb(128, 192, 235)) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+}
+
+button {
+    opacity: 0.3;
+    border-radius: 0.7rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+}
+
+.kep {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.text {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+}
+
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+@media screen and (max-width: 770px) {
+    body {
+        height: 100vh;
+    }
+    #container {
+        width: 100%;
+        overflow-y: hidden !important;
+    }
+    .button-container {
+        width: 100%;
+    }
+    #infoBox {
+        margin-bottom: 2rem;
+    }
+    .kep {
+        width: 80%;
+    }
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #container::before {
+        display: none;
+    }
+}
