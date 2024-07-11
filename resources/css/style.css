@@ -50,6 +50,7 @@ body {
     width: 70%;
     height: 80%;
     margin: auto;
+    margin-bottom: 220px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -116,24 +117,30 @@ h3 {
     body {
         height: 100vh;
     }
+
     #container {
         width: 100%;
         overflow-y: hidden !important;
     }
+
     .button-container {
         width: 100%;
     }
+
     #infoBox {
         margin-bottom: 2rem;
     }
+
     .kep {
         width: 80%;
     }
+
     .main {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     #container::before {
         display: none;
     }
